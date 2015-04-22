@@ -1,9 +1,20 @@
+<% if logged_in %>
+
+	<%= "Welcome #{current_user.name}" %>
+	<%= link_to 'Log Out', logout_path, method: :delete %>
+
+<% end %>
+
 <h1>This will be the main post page</h1>
+
+<%= link_to "Create new Post!", new_post_path %>
 
 <ul>
 	<% @posts.each do |post| %>
 		<li>
 			<strong> <%= post.description %> </strong>
+			<%= link_to "Edit Post?", edit_post_path(post) %>
+			<%= link_to "Add Comment", post_path(post) %>
 		</li>
 	<% end %>
 </ul>

@@ -1,6 +1,11 @@
 class SessionsController < ApplicationController
 
+	def index
+		
+	end
+
 	def new
+	
 	end
 
 	def create
@@ -8,7 +13,7 @@ class SessionsController < ApplicationController
 
 		if user && user.authenticate(params[:login][:password])
 			session[:user_id] = user.id.to_s
-			redirect_to users_path
+			redirect_to posts_path
 		else
 			render :new
 		end
@@ -16,7 +21,7 @@ class SessionsController < ApplicationController
 
 	def destroy
     session.delete(:user_id)
-    redirect_to login_path
+    redirect_to home_path
 	end
 
 end

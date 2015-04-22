@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
 resources :posts
-root "users#index"
+root "sessions#index"
 
 #user routes
 get "users" => "users#index"
 post "users" => "users#create"
 get "/signup" => "users#new"
 
+
 #session routes
+get "home" => "sessions#index"
 get "login" => "sessions#new"
 post "login" => "sessions#create"
 delete "logout" => "sessions#destroy"
