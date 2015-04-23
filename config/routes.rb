@@ -16,9 +16,9 @@ delete "logout" => "sessions#destroy"
 
 #post routes
 get "posts/" => "posts#index" 
-get "posts/new" => "posts#new" #as: :new_post 
+get "users/:id/posts/new" => "posts#new" #as: :new_post 
 get "posts/:id" => "posts#show" #, as: :post
-post "posts/" => "posts#create"
+post "users/:id/posts/" => "posts#create"
 get "posts/:id/edit" => "posts#edit" #, as: :edit_post
 post "posts/:id/edit" => "posts#update"
 patch "posts/:id" => "posts#update"

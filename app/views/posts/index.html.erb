@@ -12,6 +12,7 @@
 <ul>
 	<% @posts.each do |post| %>
 		<li>
+			<strong> <%= post.user_id %> here </strong>
 			<strong> <%= image_tag post.image_url %> </strong>
 			<strong> <%= post.description %> </strong>
 			<%= link_to "Edit Post?", edit_post_path(post) %>

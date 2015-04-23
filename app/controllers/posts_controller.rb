@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 
 	def index
 		@posts = Post.all
+
 	end
 
 	def show
@@ -9,11 +10,14 @@ class PostsController < ApplicationController
 	end
 
 	def new
-		@posts = Post.new
+		@user = current_user
+		@post = @user.posts.new
+
 	end
 
 	def create
-		@post = Post.new(post_params)
+		@user = current_user
+		@post = @user.posts.new(post_params)
 			if @post.save
 				redirect_to posts_path
 			else
@@ -43,7 +47,7 @@ class PostsController < ApplicationController
 
 	private
 	def post_params
-		params.require(:post).permit(:title, :image_url, :description, :earned)
+		params.require(:post).permit(:title, :image_url, :description, :earned, :user)
 	end
 
 end
