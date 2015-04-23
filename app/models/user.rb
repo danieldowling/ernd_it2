@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   
   attr_reader :password
 
+    #creating an instance variable and setting it, also ecrypting and authenticating our password
   	def password=(unencrypted_password)
       unless unencrypted_password.empty?
       @password = unencrypted_password
@@ -19,4 +20,9 @@ class User < ActiveRecord::Base
       end
     end
 
+
+    #we are establishing validation requirement for users when they are signing in
+    validates :name, presence: true
+    validates :email, presence: true, uniqueness: { case_sensitive: false }, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
+    validates :password, presence: true, confirmation: true, length: { in: 6..20 }
 end
