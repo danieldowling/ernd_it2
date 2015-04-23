@@ -7,6 +7,11 @@
 		<%= f.text_field :description %>
 	</div>
 
+	<div>
+		<%= f.label :image_url %>
+		<%= f.file_field :image_url %>
+	</div>
+
 	<%= f.submit "Submit Changes?" %>
 
 <% end %>
