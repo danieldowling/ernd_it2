@@ -1,6 +1,9 @@
 <h1>Edit your Post!</h1>
 
+<%= "Earned status: #{@post.earned}"%>
+
 <%= form_for :post do |f| %>
+
 
 	<div>
 		<%= f.label :description %>

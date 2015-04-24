@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_many :posts
-  
+  before_save :format_user_input
   attr_reader :password
 
     #creating an instance variable and setting it, also ecrypting and authenticating our password
@@ -26,4 +26,9 @@ class User < ActiveRecord::Base
     validates :email, presence: true, uniqueness: { case_sensitive: false }, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
     validates :password, presence: true, confirmation: true, length: { in: 6..20 }
 
+    private
+    def format_user_input
+      self.name = self.name.titleize
+      self.email = self.email.downcase
+    end
 end

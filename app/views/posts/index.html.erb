@@ -1,4 +1,4 @@
-<% if logged_in %>
+<% if logged_in? %>
 
 	<%= "Welcome #{current_user.name}" %>
 	<%= link_to 'Log Out', logout_path, method: :delete %>
@@ -11,12 +11,18 @@
 
 <ul>
 	<% @posts.each do |post| %>
-		<li>
-			<strong> <%= post.user_id %> here </strong>
-			<strong> <%= image_tag post.image_url %> </strong>
-			<strong> <%= post.description %> </strong>
-			<%= link_to "Edit Post?", edit_post_path(post) %>
-			<%= link_to "Add Comment", post_path(post) %>
-		</li>
+		<%= form_for :post do |f| %>
+			<li>
+				<strong> <%= post.user.name %> </strong> <br>
+				<strong> <%= image_tag post.image_url, :class => "earned-#{post.earned}" %> </strong> <br>
+				<strong> <%= post.description %> </strong> <br>
+				<%= link_to "Add Comment", post_path(post) %>
+				
+				<% if can_edit(post) %>
+					<%= link_to "Edit Post?", edit_post_path(post) %> 
+					<%= f.submit "ERND IT" %>
+				<% end %>
+			</li>
+		<% end %>
 	<% end %>
 </ul>

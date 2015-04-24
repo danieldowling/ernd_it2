@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
-
-	def index
+ before_action :authorized?, only: [:edit, :update]
+	
+  def index
 		@posts = Post.all
 
 	end
@@ -49,5 +50,12 @@ class PostsController < ApplicationController
 	def post_params
 		params.require(:post).permit(:title, :image_url, :description, :earned, :user)
 	end
+
+  def authorized?
+    unless current_user = Post.find(params[:id])
+      flash[:error] = "You are not authorized to access that page."
+      redirect_to posts_path 
+    end
+  end
 
 end

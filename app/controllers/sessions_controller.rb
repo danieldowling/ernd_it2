@@ -13,6 +13,7 @@ class SessionsController < ApplicationController
 
 		if user && user.authenticate(params[:login][:password])
 			session[:user_id] = user.id.to_s
+            flash[:welcome] = "Thanks for signing up, #{user.name}"
 			redirect_to posts_path
 		else
 			flash.now[:error] = "Your email address or password are incorrect."
@@ -24,5 +25,6 @@ class SessionsController < ApplicationController
     session.delete(:user_id)
     redirect_to home_path
 	end
-
 end
+
+
