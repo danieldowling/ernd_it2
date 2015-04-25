@@ -1,9 +1,15 @@
 class PostsController < ApplicationController
  before_action :authorized?, only: [:edit, :update]
 	
-  def index
+  	def index
 		@posts = Post.all
+	end
 
+	def earned
+		@post = Post.find(params[:id])
+    @post.earned = true
+    @post.save
+    redirect_to posts_path
 	end
 
 	def show

@@ -16,6 +16,7 @@ delete "logout" => "sessions#destroy"
 
 #post routes
 get "posts/" => "posts#index" 
+get "posts/:id/earn" => "posts#earned", as: :earn_post
 get "users/:id/posts/new" => "posts#new" #as: :new_post 
 get "posts/:id" => "posts#show" #, as: :post
 post "users/:id/posts/" => "posts#create"

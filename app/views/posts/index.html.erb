@@ -11,7 +11,7 @@
 
 <ul>
 	<% @posts.each do |post| %>
-		<%= form_for :post do |f| %>
+		
 			<li>
 				<strong> <%= post.user.name %> </strong> <br>
 				<strong> <%= image_tag post.image_url, :class => "earned-#{post.earned}" %> </strong> <br>
@@ -20,9 +20,8 @@
 				
 				<% if can_edit(post) %>
 					<%= link_to "Edit Post?", edit_post_path(post) %> 
-					<%= f.submit "ERND IT" %>
+					<%= link_to "ERND IT", earn_post_path(post) %>
 				<% end %>
 			</li>
-		<% end %>
 	<% end %>
 </ul>
