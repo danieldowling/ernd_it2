@@ -39,11 +39,8 @@
 						<div class="post">
 							
 							<div class="post-image">
-								<div class="earn">
-								</div>
-
-									<%= image_tag post.image_url, :class => "earned-#{post.earned}" %>
-								
+								<%= image_tag post.image_url %>
+								<div class="<%= "earned-#{post.earned}"%>"><span>ERND IT!</span></div>
 							</div>
 						
 						

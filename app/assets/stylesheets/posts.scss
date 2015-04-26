@@ -1,6 +1,7 @@
 #main-post-container {
 
 	background-color: grey;
+	padding: 5px;
 	
 	.header {
 		background-color: grey;
@@ -35,6 +36,7 @@
 		background-color: lightblue;
 		border-radius: 20px;
 		margin: 10px;
+		margin-bottom: 10px;
 		padding:10px;
 	}
 
@@ -73,27 +75,50 @@
 		border-bottom: 3px solid grey;
 	}
 
-	.post img {
-		border-radius: 40px;
-		width: 450px;
-	}
-
-	.earn {
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-	}
 	
+
+
+
 	.post h3{
 		color: grey;
 		font-size: 28px;
 	}
 
-	.earned-true {
-		border: 4px solid lightblue;
+	.post-image {
+		position: relative;
+		z-index: 0;
+		width: 450px;
+		height: 450px;
+		border-radius: 40px;
+		overflow: hidden;
+		img {
+			
+			width: 100%;
+		}
+		.earned-true {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			
+			span {
+				text-align: center;
+				line-height: 4.5em;
+				display: flex; 
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				font-size: 94px;
+				font-weight: 900;
+				transform: rotate(-45deg);
+				text-shadow: 0 0 20px #00D;
+				color: lightblue;
+			}
+		}
 	}
+	
 
 	.earned-false {
 		border: 4px solid grey;
