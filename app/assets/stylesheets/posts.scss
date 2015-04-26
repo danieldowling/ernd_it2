@@ -1,0 +1,120 @@
+#main-post-container {
+
+	background-color: grey;
+	
+	.header {
+		background-color: grey;
+		color: lightblue;
+	}
+
+	.welcome-user {
+		font-size: 25px;
+		margin:20px;
+		background-color: lightblue;
+		color: grey;
+		border-radius: 20px;
+		padding-left: 15px;
+	}
+
+	.user-logout {
+		font-size: 25px;
+		margin: 20px;
+		margin-left: 1135px;
+		margin-top: -59px;
+		color: grey;
+	}
+
+	.h1 {
+		font-size: 40px;
+		margin: 0 auto;
+		text-align: center;
+		padding: 20px;
+	}
+
+	.body {
+		background-color: lightblue;
+		border-radius: 20px;
+		margin: 10px;
+		padding:10px;
+	}
+
+	.new-post {
+		text-align: center;
+		margin: 30px;
+		margin-top: 10px;
+		margin-left: 361px;
+		margin-right: 361px;
+		padding: 20px;
+		font-size: 30px;
+		color: lightblue;
+		background-color: grey;
+		border-radius: 20px;
+	}
+
+	.full-post {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.username {
+		font-size: 30px;
+		margin: 20px;
+		color: grey;
+		/*border: 3px solid grey;*/
+	}
+
+	.post {
+		display: flex;
+		flex: 2;
+		align-items: center;
+		flex-direction: column;
+		color: grey;
+		border-bottom: 3px solid grey;
+	}
+
+	.post img {
+		border-radius: 40px;
+		width: 450px;
+	}
+
+	.earn {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.post h3{
+		color: grey;
+		font-size: 28px;
+	}
+
+	.earned-true {
+		border: 4px solid lightblue;
+	}
+
+	.earned-false {
+		border: 4px solid grey;
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	button {
+		border-radius: 30px;
+		margin: 10px;
+		margin-bottom: 30px;
+		padding: 10px;
+		font-size: 16px;
+		background-color: grey;
+		color: lightblue;
+		font-size: 18px;
+	}
+
+}
+
+
+
