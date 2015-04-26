@@ -2,14 +2,14 @@
 
 <%= form_for @post do |f| %>
 
-	<div>
-		<%= f.label :description %>
+	<div class="form-group">
+		<p>What is your goal?</p><% f.label :description %>
 		<%= f.text_field :description %>
 	</div>
 
 
-	<div>
-		<%= f.label :image_url %>
+	<div class="form-group">
+		<p>What would you like to earn?</p><% f.label :image_url %>
 		<%= f.file_field :image_url %>
 	</div>
 
