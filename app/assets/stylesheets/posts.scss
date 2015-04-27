@@ -63,7 +63,7 @@
 		font-size: 30px;
 		margin: 20px;
 		color: grey;
-		/*border: 3px solid grey;*/
+		border-top: 3px solid grey
 	}
 
 	.post {
@@ -74,10 +74,6 @@
 		color: grey;
 		border-bottom: 3px solid grey;
 	}
-
-	
-
-
 
 	.post h3{
 		color: grey;
@@ -141,5 +137,103 @@
 
 }
 
+#edit-post-controller {
 
+	background-color: grey;
+	font-size: 40px;
+	color: lightblue;
+	text-align: center;
+
+	.h1 {
+		margin-bottom: 40px;
+		border-bottom: 2px solid lightblue;
+	}
+
+	.edit {
+		border: 4px solid lightblue;
+		margin: 0 auto;
+		font-size: 20px;
+		margin-right: 400px;
+		margin-left: 400px;
+		padding: 50px;
+		border-radius: 10px;
+	}
+
+	.edit section {
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+
+	.edit button {
+		font-size: 20px;
+		border-radius: 20px;
+		padding: 5px;
+		background-color: lightblue;
+		color: grey;
+		margin: 5px;
+	}
+
+}
+
+#new-post-controller {
+	background-color: grey;
+	font-size: 40px;
+	color: lightblue;
+	text-align: center;
+
+	.h1 {
+		margin-bottom: 40px;
+		border-bottom: 2px solid lightblue;
+	}
+
+	.new {
+		border: 4px solid lightblue;
+		margin: 0 auto;
+		font-size: 20px;
+		margin-right: 400px;
+		margin-left: 400px;
+		padding: 50px;
+		border-radius: 10px;
+	}
+
+	.new p {
+		font-size: 26px;
+	}
+
+	.new button {
+		font-size: 20px;
+		border-radius: 20px;
+		padding: 5px;
+		background-color: lightblue;
+		color: grey;
+		margin: 5px;
+	}
+
+
+}
+
+#comment-container {
+	background-color: grey;
+	font-size: 20px;
+	color: lightblue;
+	text-align: center;
+
+	.comment button {
+		font-size: 20px;
+		border-radius: 20px;
+		padding: 5px;
+		background-color: lightblue;
+		color: grey;
+		margin: 5px;
+	}
+
+	.comment form {
+		font-size: 20px;
+		border-radius: 20px;
+		padding: 5px;
+		background-color: lightblue;
+		color: grey;
+		margin: 5px;
+	}
+}
 

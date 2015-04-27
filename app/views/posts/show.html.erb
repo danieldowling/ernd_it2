@@ -1,3 +1,12 @@
-<h1> <%= @post.description %> </h1>
+<div id="comment-container">
 
-<%= link_to "Back to Main Page", posts_path %>
+	<div class="comment">
+		<h1 class="h1"> <%= @post.description %> </h1>
+
+		<br>
+
+		<button><%= link_to "Back to Main Page", posts_path %></button>
+
+	</div>
+
+</div><!-- end comment-container -->

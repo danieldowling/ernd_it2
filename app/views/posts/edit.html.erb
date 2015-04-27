@@ -1,24 +1,38 @@
-<h1>Edit your Post!</h1>
+<div id="edit-post-controller">
 
-<%= "Earned status: #{@post.earned}"%>
+	<h1 class="h1">Edit your Post!</h1>
 
-<%= form_for :post do |f| %>
+	<!-- <%= "Earned status: #{@post.earned}"%> -->
+
+	<%= form_for :post do |f| %>
 
 
-	<div>
-		<%= f.label :description %>
-		<%= f.text_field :description %>
-	</div>
+		<div class="edit">
+			<section>
 
-	<div>
-		<%= f.label :image_url %>
-		<%= f.file_field :image_url %>
-	</div>
+				<%= f.label :description %>
+				<%= f.text_field :description %>
+			
+				<br>
 
-	<%= f.submit "Submit Changes?" %>
-	
-	<%= link_to "Destroy this Post?", post_path, method: :delete, data: {confirm: "Are you sure you wish to delete this post?"} %>
+				<%= f.label :image_url %>
+				<%= f.file_field :image_url %>
 
-<% end %>
+				<br>
 
-<%= link_to "Click to Return Home", posts_path %>
+			</section>
+		
+		
+
+			<button>
+				<%= f.submit "Submit Changes" %>
+			</button>
+		
+			<button><%= link_to "Delete Post", post_path, method: :delete, data: {confirm: "Are you sure you wish to delete this post?"} %></button>
+
+			<% end %>
+
+			<button><%= link_to "Click to Return Home", posts_path %></button>
+		</div> <!-- end edit -->
+
+</div> <!-- edit-post-controller -->
