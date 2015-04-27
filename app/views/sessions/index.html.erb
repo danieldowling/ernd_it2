@@ -1,15 +1,26 @@
-<% if logged_in? %>
+<div id="welcome-controller">
 
-	<%= "Welcome #{current_user.name}!" %>
-	<%= link_to 'Log Out', logout_path, method: :delete %>
+	<h1 class="h1">Welcome to Ernd It!</h1>
 
-<% else %>
+	<% if logged_in? %>
 
-	<%= link_to "Login", login_path %>
-	<%= link_to "Signup", signup_path %> 
-  
+		<%= "Welcome #{current_user.name}!" %>
+		<%= link_to 'Log Out', logout_path, method: :delete %>
 
-<% end %>
+	<% else %>
 
+		<div class="login">
 
-<h1>This will be the login/welcome page</h1>
+			<span> Please </span> <br>
+
+			<button><%= link_to "Login", login_path %></button>
+
+			<br> <span> or </span> <br>
+		
+			<button><%= link_to "Signup", signup_path %></button> 
+	  	</div>
+
+	<% end %>
+
+</div> <!-- end welcome-controller -->
+
