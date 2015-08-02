@@ -1,15 +1,15 @@
 class PostsController < ApplicationController
  before_action :authorized?, only: [:edit, :update]
 	
-  	def index
+  def index
 		@posts = Post.all
 	end
 
 	def earned
 		@post = Post.find(params[:id])
-    @post.earned = true
-    @post.save
-    redirect_to posts_path
+    	@post.earned = true
+    	@post.save
+   		redirect_to posts_path
 	end
 
 	def show
@@ -57,11 +57,11 @@ class PostsController < ApplicationController
 		params.require(:post).permit(:title, :image_url, :description, :earned, :user)
 	end
 
-  def authorized?
-    unless current_user = Post.find(params[:id])
-      flash[:error] = "You are not authorized to access that page."
-      redirect_to posts_path 
-    end
-  end
+  	def authorized?
+    	unless current_user = Post.find(params[:id])
+      		flash[:error] = "You are not authorized to access that page."
+      		redirect_to posts_path 
+    	end
+  	end
 
 end

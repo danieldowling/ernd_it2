@@ -25,4 +25,10 @@ post "posts/:id/edit" => "posts#update"
 patch "posts/:id" => "posts#update"
 delete "posts/:id" => "posts#destroy"
 
+#role routes
+
+get "roles/" => "roles#index"
+get "roles/new" => "roles#new", as: :new_role
+post "roles/" => "roles#create"
+
 end

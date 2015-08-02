@@ -1,0 +1,13 @@
+<div id="role-index-container">
+
+	<% @roles.each do |role| %>
+	      
+	    <%= role.name %>
+	    <%= link_to 'Show', role %>
+	    <%= link_to 'Edit', edit_role_path(role) %>
+	    <%= link_to 'Destroy', role, method: :delete, data: { confirm: 'Are you sure?' } %>
+	      
+	<% end %>
+
+	<%= link_to 'New Role', new_role_path %>
+</div>

@@ -4,11 +4,32 @@ class RolesController < ApplicationController
 		@roles = Role.all
 	end
 
-	def show
+	def new
+		@role = Role.new
 	end
 
-	def edit
+	def create
+		@role = Role.new(role_params)
+
+		if @role.save
+			redirect_to posts_path
+		else
+			render :new
+		end
+    end
+
+    def edit
 	end
+
+  private
+
+  def set_role
+  	@role = Role.find(params[:id])
+  end
+
+  def role_params
+    params.require(:role).permit(:name)
+  end
 
 	
 end

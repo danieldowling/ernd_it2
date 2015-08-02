@@ -1,6 +1,7 @@
 <div id="welcome-controller">
 
-	<h1 class="h1">Welcome to Ernd It!</h1>
+<div class="header">
+	<h1>Welcome to Ernd It!</h1>
 
 	<% if logged_in? %>
 
@@ -11,16 +12,18 @@
 
 		<div class="login">
 
-			<span> Please </span> <br>
-
 			<button><%= link_to "Login", login_path %></button>
-
-			<br> <span> or </span> <br>
 		
 			<button><%= link_to "Signup", signup_path %></button> 
 	  	</div>
 
 	<% end %>
 
+</div>
+
+	<div class="background">
+		<%= image_tag "success-is-never-deserved-always-earned.jpg" %>
+
+	</div>
 </div> <!-- end welcome-controller -->
 
