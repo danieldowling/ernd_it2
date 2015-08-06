@@ -1,8 +1,9 @@
 <div id="welcome-controller">
 
 <div class="header">
-	<h1>Welcome to Ernd It!</h1>
-
+	<div class="h1">
+		<h1>Welcome to Ernd It!</h1>
+	</div>
 	<% if logged_in? %>
 
 		<%= "Welcome #{current_user.name}!" %>
@@ -21,9 +22,6 @@
 
 </div>
 
-	<div class="background">
-		<%= image_tag "success-is-never-deserved-always-earned.jpg" %>
-
-	</div>
+	
 </div> <!-- end welcome-controller -->
 

@@ -41,16 +41,24 @@ body {
 	color: #87CEFA;
 	text-align: center;
 
+	.h1 {
+		border-bottom: 3px solid #87CEFA;
+		background-color: white;
+		color: #383838;
+	}
+
 	.login {
 		margin: 0 auto;
+		margin-top: 50px;
 		font-size: 20px;
-		border-bottom: 3px solid #87CEFA;
+		text-align: center;
 	}
 
 	.login button {
 		font-size: 20px;
 		border-radius: 20px;
 		padding: 20px;
+		border: 2px solid #383838;
 		background-color: #87CEFA;
 		color: #383838;
 		margin: 15px;
