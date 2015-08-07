@@ -11,7 +11,7 @@
 	.welcome-user {
 		font-size: 25px;
 		margin:20px;
-		background-color: #87CEFA;
+		background-color: lightgrey;
 		color: #383838;
 		border-radius: 20px;
 		padding-left: 15px;
@@ -20,8 +20,13 @@
 	.user-logout {
 		font-size: 25px;
 		margin: 20px;
-		margin-left: 1135px;
+		margin-left: 1100px;
 		margin-top: -59px;
+		color: #383838;
+		text-decoration: none;
+	}
+
+	.user-logout a {
 		color: #383838;
 	}
 
@@ -30,10 +35,11 @@
 		margin: 0 auto;
 		text-align: center;
 		padding: 20px;
+		color: lightgrey;
 	}
 
 	.body {
-		background-color: #87CEFA;
+		background-image: url("https://tostir.files.wordpress.com/2012/08/big-sky-16353.jpg");
 		border-radius: 20px;
 		margin: 10px;
 		margin-bottom: 10px;
@@ -48,9 +54,13 @@
 		margin-right: 361px;
 		padding: 20px;
 		font-size: 30px;
-		color: #87CEFA;
+		color: white;
 		background-color: #383838;
 		border-radius: 20px;
+	}
+
+	.new-post a {
+		color: lightgrey;
 	}
 
 	.full-post {
@@ -59,10 +69,14 @@
 		justify-content: center;
 	}
 
+	.full-post button {
+		background-color: lightgrey;
+	}
+
 	.username {
 		font-size: 30px;
 		margin: 20px;
-		color: #383838;
+		color: lightgrey;
 		border-top: 3px solid #383838
 	}
 
@@ -110,7 +124,7 @@
 				font-weight: 900;
 				transform: rotate(-45deg);
 				text-shadow: 0 0 20px #00D;
-				color: #87CEFA;
+				color: white;
 			}
 		}
 	}
@@ -138,56 +152,70 @@
 }
 
 #edit-post-controller {
-
-	background-color: #383838;
+	width: 100%;
+	margin: 0 auto;
 	font-size: 40px;
-	color: #87CEFA;
+	color: white;
 	text-align: center;
 
 	.h1 {
 		margin-bottom: 40px;
-		border-bottom: 2px solid #87CEFA;
 	}
 
 	.edit {
-		border: 4px solid #87CEFA;
+		width: 100%;
 		margin: 0 auto;
 		font-size: 20px;
-		margin-right: 400px;
-		margin-left: 400px;
+		margin: 0 auto;
 		padding: 50px;
 		border-radius: 10px;
 	}
 
 	.edit section {
+		width: 40%;
 		font-size: 24px;
+		margin: 0 auto;
 		margin-bottom: 20px;
+		
+	}
+
+	.edit section input {
+		border-radius: 5px;
+		color: #383838;
 	}
 
 	.edit button {
+		width: 20%;
 		font-size: 20px;
 		border-radius: 20px;
 		padding: 5px;
-		background-color: #87CEFA;
-		color: #383838;
+		background-color: white;
+		color: #2a6496;
 		margin: 5px;
+	}
+
+	.edit button input {
+		background-color: white;
+		color: #2a6496;
+	}
+
+	.edit button a {
+		color: #2a6496;
 	}
 
 }
 
 #new-post-controller {
-	background-color: #383838;
 	font-size: 40px;
-	color: #87CEFA;
+	color: white;
 	text-align: center;
 
 	.h1 {
 		margin-bottom: 40px;
-		border-bottom: 2px solid #87CEFA;
 	}
 
 	.new {
-		border: 4px solid #87CEFA;
+		border: 4px solid white;
 		margin: 0 auto;
 		font-size: 20px;
 		margin-right: 400px;
@@ -200,11 +228,20 @@
 		font-size: 26px;
 	}
 
+	.new button input {
+		background-color: white;
+		color: #2a6496;
+	}
+
+	.new button a {
+		color: #2a6496;
+	}
+
 	.new button {
 		font-size: 20px;
 		border-radius: 20px;
 		padding: 5px;
-		background-color: #87CEFA;
+		background-color: white;
 		color: #383838;
 		margin: 5px;
 	}
@@ -212,7 +249,7 @@
 
 }
 
-#comment-container {
+/*#comment-container {
 	background-color: #383838;
 	font-size: 20px;
 	color: #87CEFA;
@@ -236,7 +273,7 @@
 		margin: 5px;
 	}
 }
-
+*/
 /*input[type="submit"] {
 		font-size: 20px;
 		border-radius: 20px;
