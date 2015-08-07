@@ -1,33 +1,31 @@
 <div id="log-in-container">
-
+	<div class="cover-container">
 		<h1 class="h1">Login now to Enter!</h1>
 
-	<div class="login">
-		<%= form_for :login do |f| %>
+			<div class="login">
+				<%= form_for :login do |f| %>
 
-			<div>
-				<h3>Login or Sign Up</h3>
+
+					<div>
+						<%= f.label :email %>
+						<%= f.text_field :email %>
+					</div>
+
+					<div>
+						<%= f.label :password %>
+						<%= f.password_field :password %>
+					</div>
+
+					<div class="btn btn-lg btn-default">
+						<button><%= link_to 'Log In' %></button>
+					
+						<button><%= link_to "Signup", signup_path %></button> 
+						<button><%= link_to "Go Back", home_path %></button>
+
+					</div>
+
+				<% end %> 
 			</div>
-
-			<div>
-				<%= f.label :email %>
-				<%= f.text_field :email %>
-			</div>
-
-			<div>
-				<%= f.label :password %>
-				<%= f.password_field :password %>
-			</div>
-
-			<div>
-				<button><%= link_to 'Log In' %></button>
-			
-			<button><%= link_to "Signup", signup_path %></button> 
-			<button><%= link_to "Go Back", home_path %></button>
-
-			</div>
-
-		<% end %> 
 	</div>
 
 </div>

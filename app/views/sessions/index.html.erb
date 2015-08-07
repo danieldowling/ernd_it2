@@ -1,27 +1,29 @@
-<div id="welcome-controller">
+<div class="site-wrapper">
 
-<div class="header">
-	<div class="h1">
-		<h1>Welcome to Ernd It!</h1>
-	</div>
-	<% if logged_in? %>
+      <div class="site-wrapper-inner">
 
-		<%= "Welcome #{current_user.name}!" %>
-		<%= link_to 'Log Out', logout_path, method: :delete %>
+        <div class="cover-container">
 
-	<% else %>
+          <div class="inner cover">
+            <h1 class="cover-heading">Welcome to ERND IT</h1>
+         
+            <div class="btn btn-lg btn-default"><%= link_to "Login", login_path %></div>
 
-		<div class="login">
+            <div class="btn btn-lg btn-default"><%= link_to "Signup", signup_path %></div>
+            
+          </div>
 
-			<button><%= link_to "Login", login_path %></button>
-		
-			<button><%= link_to "Signup", signup_path %></button> 
-	  	</div>
+          <div class="mastfoot">
+            <div class="inner">
+              <p> Dowling Development </p>
+            </div>
+          </div>
 
-	<% end %>
+        </div>
 
-</div>
+      </div>
 
-	
-</div> <!-- end welcome-controller -->
+    </div>
+
+
 
